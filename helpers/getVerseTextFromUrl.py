@@ -13,6 +13,6 @@ def getVerseTextFromUrl(url):
     verseText = soup.find("div", class_="yv-gray50")
 
     if verseText.text == 'Book':
-        raise Exception('Must enter a valid Bible reference')
+        raise Exception(f"Must enter a valid Bible reference, {url} is invalid")
     
     return verseText.text

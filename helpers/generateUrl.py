@@ -13,13 +13,13 @@ def generateUrl(reference):
     else:
         if book in urlHash:
             if book not in urlHash.keys():
-                raise Exception('Must enter a valid Bible reference')
+                raise Exception(f"Must enter a valid Bible reference, {book} is invalid")
             bookRef = urlHash[book]
             chapVerseRef = splitReference[1].split(':')
         else:
             book = splitReference[0] + " " + splitReference[1]
             if book not in urlHash.keys():
-                raise Exception('Must enter a valid Bible reference')
+                raise Exception(f"Must enter a valid Bible reference, {book} is invalid")
             bookRef = urlHash[book]
             chapVerseRef = splitReference[2].split(':')
     
